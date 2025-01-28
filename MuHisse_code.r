@@ -103,7 +103,7 @@ fun_phy_data <- fun_phy_data %>%
 # Run Hisse models (MuHisse next) *** All models are included as .rda objects by the same name below (i.e. load(hisse_model_geo_only.rda) -> hisse_model_geo_only$solution or hisse_model_geo_only$AIC
 
 # No hidden states 
-trans.rates <- TransMatMakerHiSSE(hidden.traits = 1)
+trans.rates <- TransMatMakerHiSSE(hidden.traits = 0)
 
 hisse_model_geo_only <- hisse(phy = pruned_phylogeny, data = geo_data, trans.rate = trans.rates, turnover = c(1, 2), eps = c(1, 2), hidden.states = FALSE)
 
